@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 gem "haml"
 
+gem 'fabrication'
+
+gem 'faker'
+
 group :test, :development do
   gem 'rspec-rails'  
   gem "shoulda-matchers"
