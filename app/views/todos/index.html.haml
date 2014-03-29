@@ -1,4 +1,4 @@
-%h1 Todo List
+%h1= raw "Todo List #{link_to "new", new_todo_path}"
 - @todos.each do |todo|
   %p= raw "#{todo.display_text}  #{link_to "edit", edit_todo_path(todo)} #{link_to "delete", todo_path(todo), method: :delete}"
 
