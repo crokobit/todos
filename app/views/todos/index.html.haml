@@ -1,4 +1,6 @@
 %h1 Todo List
 - @todos.each do |todo|
-  %p= todo.display_text
+  %p= raw "#{todo.display_text}  #{link_to "edit", edit_todo_path(todo)} #{link_to "delete", todo_path(todo), method: :delete}"
+
+
 
