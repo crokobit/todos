@@ -3,6 +3,9 @@ class Todo < ActiveRecord::Base
   has_many :tag_todos
   has_many :tags, through: :tag_todos
 
+#   validates_presence_of :do_what
+  validates :do_what, presence: true
+
   def display_text
     if tags.blank?
       do_what

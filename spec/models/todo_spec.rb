@@ -4,7 +4,7 @@ describe Todo do
   describe "shoulda-matcher"  do
   end
   describe "#display_tags" do
-    let(:todo) {Fabricate(:todo)}
+    let(:todo) { Todo.create(do_what: "grammer")}
     it "displays the name when there is no tags" do
       expect(todo.display_text).to eq "grammer"
     end

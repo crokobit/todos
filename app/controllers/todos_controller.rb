@@ -1,5 +1,7 @@
 class TodosController < ApplicationController
   
+  before_action :set_todo, only: [:edit, :show, :update, :destroy]
+  
   def index
     @todos = Todo.all    
   end
@@ -16,6 +18,25 @@ class TodosController < ApplicationController
     else
       render :new
     end
+  end
+  
+  def edit; end
+
+  def update
+    if @todo.update(todo_param)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @todo.destroy
+    redirect_to root_path   
+  end
+
+  def set_todo
+    @todo = Todo.find(params[:id])
   end
 
   private
