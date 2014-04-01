@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140324155005) do
+ActiveRecord::Schema.define(version: 20140331080531) do
 
   create_table "tag_todos", force: true do |t|
     t.integer "tag_id"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 20140324155005) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
 end

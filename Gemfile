@@ -1,10 +1,13 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass', '~> 2.3.2.0'
 gem "haml"
 
 gem 'fabrication'
 
 gem 'faker'
+
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :test, :development do
   gem 'rspec-rails'  

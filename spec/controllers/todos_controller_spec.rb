@@ -37,6 +37,7 @@ describe TodosController do
         expect(Todo.first.do_what).to eq "grammer"
       end
       it "redirects to todos#root_path" do
+        post :create, todo: {do_what: "grammer"}
         expect(response).to redirect_to root_path
       end
     end
